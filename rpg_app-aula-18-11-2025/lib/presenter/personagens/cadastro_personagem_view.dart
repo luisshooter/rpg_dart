@@ -84,7 +84,12 @@ class _CadastroPersonagemViewState extends State<CadastroPersonagemView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Cadastro de herois')),
+      appBar: AppBar(
+        title: Text('Cadastro de Heróis'),
+        backgroundColor: Colors.deepPurple,
+        elevation: 4,
+        shadowColor: Colors.deepPurpleAccent,
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(15),
@@ -169,39 +174,48 @@ class _CadastroPersonagemViewState extends State<CadastroPersonagemView> {
                     ListTile(
                       leading: IconButton(
                         onPressed: _minusVida,
-                        icon: Icon(Icons.exposure_minus_1),
+                        icon: Icon(Icons.exposure_minus_1, color: Colors.deepPurple),
                       ),
                       trailing: IconButton(
                         onPressed: _addVida,
-                        icon: Icon(Icons.plus_one),
+                        icon: Icon(Icons.plus_one, color: Colors.deepPurple),
                       ),
-                      title: Text('Pontos de vida: $_pontosVida'),
+                      title: Text(
+                        'Pontos de vida: $_pontosVida',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       subtitle: _buildBar(_pontosDisponiveis, _pontosVida),
                     ),
                     Divider(),
                     ListTile(
                       leading: IconButton(
                         onPressed: _minusEscudo,
-                        icon: Icon(Icons.exposure_minus_1),
+                        icon: Icon(Icons.exposure_minus_1, color: Colors.deepPurple),
                       ),
                       trailing: IconButton(
                         onPressed: _addEscudo,
-                        icon: Icon(Icons.plus_one),
+                        icon: Icon(Icons.plus_one, color: Colors.deepPurple),
                       ),
-                      title: Text('Pontos de escudo: $_pontosEscudo'),
+                      title: Text(
+                        'Pontos de escudo: $_pontosEscudo',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       subtitle: _buildBar(_pontosDisponiveis, _pontosEscudo),
                     ),
                     Divider(),
                     ListTile(
                       leading: IconButton(
                         onPressed: _minusVelocidade,
-                        icon: Icon(Icons.exposure_minus_1),
+                        icon: Icon(Icons.exposure_minus_1, color: Colors.deepPurple),
                       ),
                       trailing: IconButton(
                         onPressed: _addVelocidade,
-                        icon: Icon(Icons.plus_one),
+                        icon: Icon(Icons.plus_one, color: Colors.deepPurple),
                       ),
-                      title: Text('Pontos de velocidade: $_pontosVelocidade'),
+                      title: Text(
+                        'Pontos de velocidade: $_pontosVelocidade',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       subtitle: _buildBar(
                         _pontosDisponiveis,
                         _pontosVelocidade,
@@ -210,7 +224,13 @@ class _CadastroPersonagemViewState extends State<CadastroPersonagemView> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                ElevatedButton(onPressed: _salvarPersonagem, child: Text('Salvar')),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple,
+                  ),
+                  onPressed: _salvarPersonagem,
+                  child: Text('Salvar'),
+                ),
               ],
             ),
           ),

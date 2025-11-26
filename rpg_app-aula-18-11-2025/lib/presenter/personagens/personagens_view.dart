@@ -16,9 +16,15 @@ class _PersonagensViewState extends State<PersonagensView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Personagens')),
+      appBar: AppBar(
+        title: const Text('Personagens'),
+        backgroundColor: Colors.deepPurple,
+        elevation: 4,
+        shadowColor: Colors.deepPurpleAccent,
+      ),
       body: _construirLista(),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.deepPurple,
         child: const Icon(Icons.add),
         onPressed: () async {
           final result = await Navigator.push(

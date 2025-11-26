@@ -17,7 +17,12 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home $_itemSelecionado')),
+      appBar: AppBar(
+        title: Text('Home $_itemSelecionado'),
+        backgroundColor: Colors.deepPurple,
+        elevation: 4,
+        shadowColor: Colors.deepPurpleAccent,
+      ),
       body: IndexedStack(
         index: _itemSelecionado,
         children: _telas,
@@ -29,6 +34,9 @@ class _HomeViewState extends State<HomeView> {
             _itemSelecionado = index;
           });
         },
+        selectedItemColor: Colors.deepPurple,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.shield), label: 'Arena'),
           BottomNavigationBarItem(
