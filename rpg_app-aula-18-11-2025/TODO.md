@@ -1,5 +1,7 @@
-- [x] Add validation to the Save button in cadastro_personagem_view.dart: check if name, kingdom, mission are not empty and if at least one point is assigned; show error popup if not.
-- [x] Test the validation by trying to save with missing fields.
-- [x] Remove dummy characters from PersonagensView.
-- [x] Fix Heroi import in cadastro_personagem_view.dart.
-- [ ] Add modern success notification (green balloon in top right) when character is saved in PersonagensView.
+# TODO List for UI Modernization and Documentation
+
+- [ ] Update theming and visual style in lib/presenter/home/home_view.dart
+- [ ] Update theming and visual style in lib/presenter/personagens/personagens_view.dart
+- [ ] Update theming and visual style in lib/presenter/personagens/cadastro_personagem_view.dart
+- [ ] Commit all UI and style changes with proper versioning and descriptive commit messages
+- [ ] Create a professional README.md describing the project for GitHub posting
